@@ -1,0 +1,131 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27 ene 2025, 6:56:37 p. m.
+    Author     : Eduin M
+*/
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+} /* Selecciona todos los elementos de la pagina */
+
+body {
+
+    font-family: sans-serif;
+    background-color: #BAC0E3;
+    padding: 80px 20px 0px;
+    
+}
+
+header {
+position: fixed;
+background-color:#1B263B;
+top: 0;
+left: 0;
+height: 80px;
+width: 100%;
+}
+
+aside{
+    position: fixed;
+    color: white;
+    background-color:#0D1B2A;
+    top: 80px;
+    left: 0%;
+    bottom: 20px;
+    width: 20%;
+}
+
+section{
+
+overflow-y: scroll;
+position: fixed;
+background-color: #E0E1DD;
+top: 80px;
+left: 20%;
+bottom: 20px;
+width: 80%;
+
+}
+
+footer{
+    position: fixed;
+    background-color:#1B263B;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    color: tomato;
+
+}
+
+thead tr{
+    background-color: black;
+    color: white;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #520afa;
+}
+
+tbody tr:nth-child(even){
+    background-color: #611c1c;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    background-color: #1B263B;
+}
+
+a:hover{
+    background-color: black;
+    color: white;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+
+}
+
+.nav-menu-link{
+    font-size: 18px;
+    margin: 0 18px;
+    line-height: 90px;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-menu-link:hover{
+    background-color: #024070;
+    transition: delay 0.5s;
+    
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+
+}
