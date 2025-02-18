@@ -1,0 +1,151 @@
+Listado de rutas de carpetas para el volumen Disco
+El número de serie del volumen es E285-0C6A
+C:.
+¦   .hintrc
+¦   estructura.txt
+¦   
++---.idea
+¦       .gitignore
+¦       compiler.xml
+¦       EA-19-Portafolio-Tienda-IC-2025.iml
+¦       encodings.xml
+¦       jarRepositories.xml
+¦       misc.xml
+¦       modules.xml
+¦       vcs.xml
+¦       workspace.xml
+¦       
++---.vscode
+¦       settings.json
+¦       
++---Tienda2025
+    ¦   .gitattributes
+    ¦   .gitignore
+    ¦   estilos.css
+    ¦   HELP.md
+    ¦   nb-configuration.xml
+    ¦   nbactions.xml
+    ¦   pom.xml
+    ¦   
+    +---src
+    ¦   +---main
+    ¦   ¦   +---java
+    ¦   ¦   ¦   +---com
+    ¦   ¦   ¦       +---tienda
+    ¦   ¦   ¦           ¦   ProjectConfig.java
+    ¦   ¦   ¦           ¦   TiendaApplication.java
+    ¦   ¦   ¦           ¦   
+    ¦   ¦   ¦           +---controller
+    ¦   ¦   ¦           ¦       CategoriaController.java
+    ¦   ¦   ¦           ¦       
+    ¦   ¦   ¦           +---dao
+    ¦   ¦   ¦           ¦       CategoriaDao.java
+    ¦   ¦   ¦           ¦       
+    ¦   ¦   ¦           +---domain
+    ¦   ¦   ¦           ¦       Categoria.java
+    ¦   ¦   ¦           ¦       
+    ¦   ¦   ¦           +---service
+    ¦   ¦   ¦               ¦   CategoriaService.java
+    ¦   ¦   ¦               ¦   
+    ¦   ¦   ¦               +---impl
+    ¦   ¦   ¦                       CategoriaServiceImpl.java
+    ¦   ¦   ¦                       
+    ¦   ¦   +---resources
+    ¦   ¦       ¦   .DS_Store
+    ¦   ¦       ¦   application.properties
+    ¦   ¦       ¦   messages.properties
+    ¦   ¦       ¦   messages_en.properties
+    ¦   ¦       ¦   messages_es.properties
+    ¦   ¦       ¦   
+    ¦   ¦       +---static
+    ¦   ¦       ¦       .DS_Store
+    ¦   ¦       ¦       
+    ¦   ¦       +---templates
+    ¦   ¦           ¦   index.html
+    ¦   ¦           ¦   
+    ¦   ¦           +---categoria
+    ¦   ¦           ¦       fragmentos.html
+    ¦   ¦           ¦       listado.html
+    ¦   ¦           ¦       
+    ¦   ¦           +---layout
+    ¦   ¦                   plantilla.html
+    ¦   ¦                   style.css
+    ¦   ¦                   
+    ¦   +---test
+    ¦       +---java
+    ¦           +---com
+    ¦               +---tienda
+    ¦                       TiendaApplicationTests.java
+    ¦                       
+    +---target
+        ¦   Tienda-1.jar
+        ¦   Tienda-1.jar.original
+        ¦   
+        +---classes
+        ¦   ¦   .netbeans_automatic_build
+        ¦   ¦   application.properties
+        ¦   ¦   messages.properties
+        ¦   ¦   messages_en.properties
+        ¦   ¦   messages_es.properties
+        ¦   ¦   
+        ¦   +---com
+        ¦   ¦   +---tienda
+        ¦   ¦       ¦   ProjectConfig.class
+        ¦   ¦       ¦   TiendaApplication.class
+        ¦   ¦       ¦   
+        ¦   ¦       +---controller
+        ¦   ¦       ¦       CategoriaController.class
+        ¦   ¦       ¦       
+        ¦   ¦       +---dao
+        ¦   ¦       ¦       CategoriaDao.class
+        ¦   ¦       ¦       
+        ¦   ¦       +---domain
+        ¦   ¦       ¦       Categoria.class
+        ¦   ¦       ¦       
+        ¦   ¦       +---service
+        ¦   ¦           ¦   CategoriaService.class
+        ¦   ¦           ¦   
+        ¦   ¦           +---impl
+        ¦   ¦                   CategoriaServiceImpl.class
+        ¦   ¦                   
+        ¦   +---templates
+        ¦       ¦   index.html
+        ¦       ¦   
+        ¦       +---categoria
+        ¦       ¦       fragmentos.html
+        ¦       ¦       listado.html
+        ¦       ¦       
+        ¦       +---layout
+        ¦               plantilla.html
+        ¦               style.css
+        ¦               
+        +---generated-sources
+        ¦   +---annotations
+        +---generated-test-sources
+        ¦   +---test-annotations
+        +---maven-archiver
+        ¦       pom.properties
+        ¦       
+        +---maven-status
+        ¦   +---maven-compiler-plugin
+        ¦       +---compile
+        ¦       ¦   +---default-compile
+        ¦       ¦           createdFiles.lst
+        ¦       ¦           inputFiles.lst
+        ¦       ¦           
+        ¦       +---testCompile
+        ¦           +---default-testCompile
+        ¦                   createdFiles.lst
+        ¦                   inputFiles.lst
+        ¦                   
+        +---surefire-reports
+        ¦       com.tienda.TiendaApplicationTests.txt
+        ¦       TEST-com.tienda.TiendaApplicationTests.xml
+        ¦       
+        +---test-classes
+            ¦   .netbeans_automatic_build
+            ¦   
+            +---com
+                +---tienda
+                        TiendaApplicationTests.class
+                        
