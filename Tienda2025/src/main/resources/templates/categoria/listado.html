@@ -1,18 +1,18 @@
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
-
-<head th:replace="~{layout/plantilla :: head}">
-    <title>TechShop</title>
-</head>
-
-<body>
-    <header th:replace="~{layout/plantilla :: header}"/>
-
-    <h2>Listado de categorías</h2>
-    
-    <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/>
-    <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/>
-    <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/> <!-- Revisar -->
-
-    <footer th:replace="~{layout/plantilla :: footer}"/>
-</body>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Prueba</title>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        <h2>Listado de categorías</h2>     
+        
+        <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/>
+        <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/>        
+        <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/>        
+        
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
 </html>
