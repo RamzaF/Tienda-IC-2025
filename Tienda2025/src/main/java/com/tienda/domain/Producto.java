@@ -19,15 +19,28 @@ public class Producto implements Serializable {
     private long idProducto;
 
     private String descripcion;
+    private  String detalle;
+    private double precio;
+    private int existencias;
     @Column(name = "ruta_imagen")
     private String rutaImagen;
     private boolean activo;
 
+    @ManyToOne
+    @JoinColumn(name="id_categoria")
+    Categoria categoria;
+
+
+
     public Producto() {
     }
 
-    public Producto(String descripcion, boolean activo) {
+    public Producto(String descripcion, String detalle, double precio, int existencias, String imagen, boolean activo) {
         this.descripcion = descripcion;
+        this.detalle = detalle;
+        this.precio = precio;
+        this.existencias = existencias;
+        this.rutaImagen = imagen;
         this.activo = activo;
     }
 }
