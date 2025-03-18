@@ -33,8 +33,7 @@ public class CategoriaController {
     private FirebaseStorageServiceImpl firebaseStorageService;
 
     @PostMapping("/guardar")
-    public String categoriaGuardar(Categoria categoria,
-                                   @RequestParam("imagenFile") MultipartFile imagenFile) {
+    public String categoriaGuardar(Categoria categoria, @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
             categoriaService.save(categoria);
             categoria.setRutaImagen(

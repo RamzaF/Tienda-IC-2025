@@ -1,9 +1,7 @@
-
 package com.tienda.domain;
 
-import jakarta.persistence.*;
 import lombok.Data;
-
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Data
@@ -19,7 +17,7 @@ public class Producto implements Serializable {
     private long idProducto;
 
     private String descripcion;
-    private  String detalle;
+    private String detalle;
     private double precio;
     private int existencias;
     @Column(name = "ruta_imagen")
@@ -27,10 +25,8 @@ public class Producto implements Serializable {
     private boolean activo;
 
     @ManyToOne
-    @JoinColumn(name="id_categoria")
+    @JoinColumn(name = "id_categoria")
     Categoria categoria;
-
-
 
     public Producto() {
     }

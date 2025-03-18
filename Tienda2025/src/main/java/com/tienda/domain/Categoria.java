@@ -23,8 +23,8 @@ public class Categoria implements Serializable {
     private boolean activo;
 
     @OneToMany
-    @JoinColumn(name="id_categoria", updatable = false)
-    private List<Producto> productos;
+    @JoinColumn(name = "id_categoria", updatable = false)
+    List<Producto> productos;
 
     public Categoria() {
     }
@@ -33,4 +33,5 @@ public class Categoria implements Serializable {
         this.descripcion = descripcion;
         this.activo = activo;
     }
+
 }
