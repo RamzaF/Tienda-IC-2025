@@ -60,4 +60,11 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> metodoNativo(double precioInf, double precioSup) {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
+    
+    // Lista de productos con existencias entre ordenados por descripcion ConsultaAmpliada
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> findByExistenciasBetweenOrderByDescripcion(int existenciasInf, int existenciasSup) {
+        return productoDao.findByExistenciasBetweenOrderByDescripcion(existenciasInf, existenciasSup);
+    }
 }

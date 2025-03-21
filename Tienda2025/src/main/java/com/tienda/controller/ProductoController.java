@@ -32,7 +32,22 @@ public class ProductoController {
         return "/producto/listado";
     }
 
-
+    @GetMapping("/listado/existencias")
+    public String listadoPorExistencias(@RequestParam(required = false) Integer existenciasInf,
+                                      @RequestParam(required = false) Integer existenciasSup,
+                                      Model model) {
+        var categorias = categoriaService.getCategorias(false);
+        var lista = (existenciasInf != null && existenciasSup != null) 
+            ? productoService.findByExistenciasBetweenOrderByDescripcion(existenciasInf, existenciasSup)
+            : productoService.getProductos(false);
+            
+        model.addAttribute("productos", lista);
+        model.addAttribute("categorias", categorias);
+        model.addAttribute("totalProductos", lista.size());
+        model.addAttribute("existenciasInf", existenciasInf);
+        model.addAttribute("existenciasSup", existenciasSup);
+        return "/producto/listado";
+    }
 
     @Autowired
     private FirebaseStorageServiceImpl firebaseStorageService;

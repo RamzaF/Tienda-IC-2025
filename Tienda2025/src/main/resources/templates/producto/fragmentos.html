@@ -90,7 +90,33 @@
                     <div class="col-md-10">​
                         <div class="card">​
                             <div class="card-header">​
-                                <h4>[[#{producto.listado}]]</h4></div>​
+                                <h4>[[#{producto.listado}]]</h4>
+                            </div>​
+                            
+                            <!-- Formulario de búsqueda por rango de existencias -->
+                            <div class="card-body">
+                                <form th:action="@{/producto/listado/existencias}" method="GET" class="row g-3 align-items-center mb-3">
+                                    <div class="col-auto">
+                                        <label for="existenciasInf" class="col-form-label">Existencias desde:</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="number" id="existenciasInf" name="existenciasInf" 
+                                               class="form-control" th:value="${existenciasInf}">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="existenciasSup" class="col-form-label">hasta:</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="number" id="existenciasSup" name="existenciasSup" 
+                                               class="form-control" th:value="${existenciasSup}">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary">Buscar</button>
+                                        <a th:href="@{/producto/listado}" class="btn btn-secondary">Limpiar</a>
+                                    </div>
+                                </form>
+                            </div>
+
                             <div th:if="${productos != null and !productos.empty}" >​
                                 <table class="table table-striped table-hover fs-6">​
                                     <thead class="table-dark">​
