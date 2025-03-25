@@ -1,8 +1,8 @@
 package com.tienda.controller;
 
-import com.tienda.domain.Categoria;
-import com.tienda.service.CategoriaService;
-import com.tienda.service.impl.FirebaseStorageServiceImpl;
+import com.tienda.domain.Usuario;
+import com.tienda.service.UsuarioService;
+import com.tienda.service.FirebaseStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,49 +13,54 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-@RequestMapping("/categoria")
-public class CategoriaController {
+@RequestMapping("/usuario")
+public class UsuarioController {
 
     @Autowired
-    private CategoriaService categoriaService;
+    private UsuarioService usuarioService;
 
     @GetMapping("/listado")
     public String listado(Model model) {
-        var lista=categoriaService.getCategorias(false);
-        model.addAttribute("categorias", lista);
-        model.addAttribute("totalCategorias", lista.size());
-        return "/categoria/listado";
+        var usuarios = usuarioService.getUsuarios();
+        model.addAttribute("usuarios", usuarios);
+        model.addAttribute("totalUsuarios", usuarios.size());
+        return "/usuario/listado";
     }
 
-
+    @GetMapping("/nuevo")
+    public String usuarioNuevo(Usuario usuario) {
+        return "/usuario/modifica";
+    }
 
     @Autowired
-    private FirebaseStorageServiceImpl firebaseStorageService;
+    private FirebaseStorageService firebaseStorageService;
 
     @PostMapping("/guardar")
-    public String categoriaGuardar(Categoria categoria, @RequestParam("imagenFile") MultipartFile imagenFile) {
+    public String usuarioGuardar(Usuario usuario,
+            @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
-            categoriaService.save(categoria);
-            categoria.setRutaImagen(
+            usuarioService.save(usuario,false);
+            usuario.setRutaImagen(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
-                            "categoria",
-                            categoria.getIdCategoria()));
+                            "usuario",
+                            usuario.getIdUsuario()));
         }
-        categoriaService.save(categoria);
-        return "redirect:/categoria/listado";
+        usuarioService.save(usuario,true);
+        return "redirect:/usuario/listado";
     }
 
-    @GetMapping("/eliminar/{idCategoria}")
-    public String categoriaEliminar(Categoria categoria) {
-        categoriaService.delete(categoria);
-        return "redirect:/categoria/listado";
+    @GetMapping("/eliminar/{idUsuario}")
+    public String usuarioEliminar(Usuario usuario) {
+        usuarioService.delete(usuario);
+        return "redirect:/usuario/listado";
     }
 
-    @GetMapping("/modificar/{idCategoria}")
-    public String categoriaModificar(Categoria categoria, Model model) {
-        categoria = categoriaService.getCategoria(categoria);
-        model.addAttribute("categoria", categoria);
-        return "/categoria/modifica";
+    @GetMapping("/modificar/{idUsuario}")
+    public String usuarioModificar(Usuario usuario, Model model) {
+        usuario = usuarioService.getUsuario(usuario);
+        model.addAttribute("usuario", usuario);
+        return "/usuario/modifica";
     }
 }
+
